@@ -1,15 +1,13 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
-
-    const btnHam = document.querySelector('.ham-btn');
-    const btnTimes = document.querySelector('.times-btn');
-    const navBar = document.getElementById('nav-bar');
-
     const btnHamClick = () => {
-        if(btnHam.className !== ''){
+        const btnHam = document.querySelector('.ham-btn');
+        const btnTimes = document.querySelector('.times-btn');
+        const navBar = document.getElementById('nav-bar');
+        if (btnHam.className !== '') {
             btnHam.style.display = "none";
             btnTimes.style.display = "block";
             navBar.classList.add("show-nav");
@@ -17,7 +15,10 @@ const Navbar = () => {
     }
 
     const btnTimesClick = () => {
-        if(btnHam.className !== ''){
+        const btnHam = document.querySelector('.ham-btn');
+        const btnTimes = document.querySelector('.times-btn');
+        const navBar = document.getElementById('nav-bar');
+        if (btnHam.className !== '') {
             btnTimes.style.display = "none";
             btnHam.style.display = "block";
             navBar.classList.remove("show-nav");
