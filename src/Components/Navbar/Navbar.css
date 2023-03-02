@@ -1,0 +1,97 @@
+/* Header */
+:root{
+    --bgColor: navy;
+}
+
+.top-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: var(--bgColor);
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.top-head .fas{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/******* js related styling *****/
+
+.ham-btn{
+    color: white;
+}
+
+.times-btn{
+    display: none;
+}
+
+.nav-bar{
+    background: rgb(2, 2, 186);
+    height: 0;
+    overflow: hidden;
+}
+
+.show-nav{
+    height: auto;
+}
+
+/********************/
+
+.nav-bar ul li{
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    transition: all 1s ease-in-out;
+}
+
+.nav-bar ul li:hover{
+    background: #0e0e0e;
+}
+
+.nav-bar ul li a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li a:hover{
+    text-decoration: underline;
+}
+
+@media(min-width: 800px){
+    /* Nav */
+    .ham-btn, .times-btn{
+        display: none !important;
+    }
+
+    .navigation-container{
+        display: flex;
+        background: var(--bgColor);
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .top-head{
+        flex: 0 0 15%;
+    }
+
+    .nav-bar{
+        flex: 1 0 auto;
+        height: 100%;
+        background: transparent;
+    }
+
+    .nav-bar nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar nav ul li{
+        padding-right: 30px;
+    }
+
+    .nav-bar nav ul li:hover{
+        background: none;
+    }
+}
